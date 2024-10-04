@@ -39,9 +39,8 @@ async function createUser(user: UserType) {
     return "User with this ID already exists";
   }
 
-  const users = await readUsers();
   const newUser = { ...user };
-  users.push(newUser);
+  allUsers.push(newUser);
   return "User created successfully";
 }
 
